@@ -1,5 +1,5 @@
-module.exports = function override(config, env) {
-    //do stuff with the webpack config...
+const { override, useBabelRc } = require("customize-cra");
+const path = require("path");
 
-    return config;
-};
+// eslint-disable-next-line react-hooks/rules-of-hooks
+module.exports = override(useBabelRc());
